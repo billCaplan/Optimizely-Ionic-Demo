@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { GlobalProvider } from '../../providers/global/global';
 
 @Component({
   selector: 'page-about',
@@ -7,8 +8,14 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public global: GlobalProvider) {
 
+
+    this.username = global.decisionEngine.getVariation('ionic_example', global.userID);
   }
+
+  sendOptlyClick(){
+    this.global.decisionEngine.track('eventHappened', this.global.userID);
+  };
 
 }

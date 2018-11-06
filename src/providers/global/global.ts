@@ -23,7 +23,7 @@ export class GlobalProvider {
 
   public decisionEngine = optlyClient;
 
-  public userID = 'another_user_gsdg'
+  public userID = 'user_12'
 
 
 }

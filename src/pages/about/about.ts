@@ -9,10 +9,9 @@ import { GlobalProvider } from '../../providers/global/global';
 export class AboutPage {
 
   constructor(public navCtrl: NavController, public global: GlobalProvider) {
-
-
-    this.username = global.decisionEngine.getVariation('ionic_example', global.userID);
+    this.username = global.decisionEngine.activate('ionic_example', global.userID);
   }
+
 
   sendOptlyClick(){
     this.global.decisionEngine.track('eventHappened', this.global.userID);

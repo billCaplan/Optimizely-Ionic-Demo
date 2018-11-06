@@ -9,7 +9,12 @@ import { GlobalProvider } from '../../providers/global/global';
 export class AboutPage {
 
   constructor(public navCtrl: NavController, public global: GlobalProvider) {
-    this.username = global.decisionEngine.activate('ionic_example', global.userID);
+    decision = global.decisionEngine.activate('ionic_example', global.userID);
+    if(decision = "var_a"){
+      this.header = "You are in Variation A"
+    } else {
+      this.header = "You are in Variation B"
+    }
   }
 
 

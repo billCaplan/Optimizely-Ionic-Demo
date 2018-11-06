@@ -1,17 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-</ion-content>
+
+
+<ion-header>
+    <ion-navbar>
+      <ion-title>Home</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+    <h2>Welcome to Ionic!</h2>
+    <p>
+      {{header}}
+    </p>
+    <p>
+      Take a look at the <code>src/pages/</code> directory to add or change tabs,
+      update any existing page or create new pages.
+    </p>
+    <br>
+    <img src="https://www.myteachingstation.com/vault/2599/web/articles/reading/alphabet/Uppercase-Letter-A-Template-Printable.jpg" alt="" width=300 height=300 *ngIf="decision === 'var_a'">
+    <p *ngIf="decision === 'var_a'">Hello! This will only show if you are in Variation A</p>
+    <img src="https://www.myteachingstation.com/vault/2599/web/articles/reading/alphabet/Uppercase-Letter-B-Template-Printable.jpg" alt="" width=300 height=300 *ngIf="decision === 'var_b'">
+    <p *ngIf="decision === 'var_b'">Hello! This will only show if you are in Variation B</p>
+  </ion-content>
